@@ -1,0 +1,40 @@
+.header-container {
+    display: flex; /* Включаем Grid */
+    justify-content: space-around;
+}
+
+.title {
+    margin-right: 20px; /* Отступ между элементами */
+    color: blue; /* Цвет текста */
+}
+
+header {
+
+    position: fixed; /* Делает заголовок фиксированным */
+    top: 0; /* Располагает заголовок в верхней части страницы */
+    left: 0; /* Устанавливает позицию по горизонтали */
+    right: 0; /* Устанавливает позицию до правого края */
+    z-index: 1000; /* Устанавливает слой на верхней позиции */
+    background-color: white; /* Фоновый цвет (можно изменить) */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Граница внизу (по желанию) */
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 5px; /* Округление углов */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3); /* Тень */
+}
+
+body {
+    padding-top: 90px; /* Устанавливаем отступ сверху, больше высоты заголовка */
+    display: flex;
+    flex-direction: column;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-content {
+    flex: 1; /* Это позволит основному контенту занимать всё доступное пространство */
+}

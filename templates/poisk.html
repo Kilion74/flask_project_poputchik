@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block base %}
+    <h1 style="text-align: center; margin-top: 2%;">Поиск поездок</h1>
+    <form method="POST" action="/poisk">
+        <div style="margin-right: 10%; margin-left: 10%; margin-top: 3%;">
+            <input type="text" name="start_city" placeholder="Город отправления" required class="form-control"><br>
+            <input type="text" name="end_city" placeholder="Город назначения" required class="form-control"><br>
+            {#        <button type="submit" class="form-control">Поиск</button>#}
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Найти поездку</button>
+        </div>
+    </form>
+
+    {% if error %}
+        <div class="error" style="text-align: center; font-size: 30px;">{{ error }}</div>
+    {% endif %}
+
+    {% if trip %}
+        <div style="border: 1px solid #4CAF50; border-radius: 8px; padding: 20px; background-color: #f9f9f9; margin-left: 10%; margin-right: 10%; margin-top: 2%;">
+            <h2 style="color: #4CAF50;">Найдена поездка:</h2>
+            <p style="font-size: 26px;">Город отправления: <strong>{{ trip.start_city }}</strong></p>
+            <p style="font-size: 26px;">Город назначения: <strong>{{ trip.end_city }}</strong></p>
+            <p style="font-size: 26px;">Дата: <strong>{{ trip.data }}</strong></p>
+            <p style="font-size: 26px;">Телефон: <strong>{{ trip.phone }}</strong></p>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block base %}
+        <h1 style="text-align: center; padding: 3%;">Доступные поездки</h1>
+    </div>
+    {% for strip in strips %}
+
+        <h3 class="header-container">
+            <span class="title"><span style="color: black">Пункт отправления:</span> {{ strip.start_city }}</span>
+            <span class="title"><span style="color: black">Пункт назначения:</span> {{ strip.end_city }}</span>
+            <span class="title"><span style="color: black">Дата поездки:</span> {{ strip.data }}</span>
+            <span class="title"><span style="color: black">Телефон для связи:</span>  {{ strip.phone }}</span>
+        </h3>
+        <hr>
+
+    {% endfor %}
+{% endblock %}

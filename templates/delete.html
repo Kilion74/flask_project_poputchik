@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block base %}
+    <form method="post" style="margin: 10%; margin-top: 5%;">
+{#        <input class="form-control" type="text" name="start_city" placeholder="Введите город отправления"><br>#}
+{#        <input class="form-control" type="text" name="start_city" placeholder="Введите город назначения"><br>#}
+        <input class="form-control" type="tel" name="phone" placeholder="Введите номер телефона"><br>
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Удалить поездку</button>
+    </form>
+{% endblock %}
